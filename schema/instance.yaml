@@ -1,0 +1,41 @@
+schemas:
+- description: Instances
+  id: instance
+  plural: instances
+  prefix: /sample/1.0
+  schema:
+    properties:
+      id:
+        description: Unique Instance ID
+        permission:
+        - create
+        title: ID
+        type: string
+        view:
+        - detail
+      name:
+        description: Instance Name
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      service:
+        description: Service
+        permission:
+        - create
+        - update
+        relation: service
+        relation_property: service
+        title: ServiceID
+        type: string
+    propertiesOrder:
+    - id
+    - name
+    - service
+    required:
+    - service
+    type: object
+    required: ['name']
+  singular: instance
+  title: Instances
