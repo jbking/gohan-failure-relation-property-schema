@@ -20,7 +20,7 @@ schemas:
         - update
         title: Name
         type: string
-      service:
+      service_id:
         description: Service
         permission:
         - create
